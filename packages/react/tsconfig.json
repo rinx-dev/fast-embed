@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "../../",
+    "paths": {
+      "@fast-embed/core": ["packages/core/src/index.ts"],
+      "@fast-embed/core/providers/youtube": ["packages/core/src/providers/youtube.ts"],
+      "@fast-embed/react": ["packages/react/src/index.ts"]
+    }
+  },
+  "include": ["src", "tests", "vitest.config.ts"]
+}

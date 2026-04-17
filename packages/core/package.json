@@ -1,0 +1,28 @@
+{
+  "name": "@fast-embed/core",
+  "version": "0.0.0",
+  "description": "Framework-agnostic primitives for fast video embeds.",
+  "type": "module",
+  "sideEffects": false,
+  "files": ["dist"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./providers/youtube": {
+      "types": "./dist/providers/youtube.d.ts",
+      "import": "./dist/providers/youtube.js",
+      "require": "./dist/providers/youtube.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "test": "vitest run --project core",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}
